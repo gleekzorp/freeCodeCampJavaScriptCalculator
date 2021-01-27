@@ -1,2 +1,1 @@
-# freeCodeCampJavaScriptCalculator
-Created with CodeSandbox
+# Free Code Camp Javascript Calculator
