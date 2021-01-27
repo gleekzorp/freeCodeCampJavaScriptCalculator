@@ -1,4 +1,45 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.display-top {
+  grid-column: 1/-1;
+  color: orange;
+}
+
+.display-bottom {
+  grid-column: 1/-1;
+  color: white;
+}
+
+.button {
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ac-button {
+  grid-column: 1/3;
+  background-color: red;
+}
+
+.zero-button {
+  grid-column: 1/3;
+}
+
+.equal-button {
+  grid-column: 4/-1;
+  grid-row: 6 /-1;
+  background-color: blue;
+}
+
+.calculator-container {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.5fr 0.5fr repeat(5, 1fr);
+  gap: 2px;
 }

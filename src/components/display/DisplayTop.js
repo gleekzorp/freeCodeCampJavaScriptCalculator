@@ -1,11 +1,7 @@
 import React from "react";
 
 const DisplayTop = () => {
-  return (
-    <div>
-      <h1>DisplayTop</h1>
-    </div>
-  );
+  return <div className="display-top display">0</div>;
 };
 
 export default DisplayTop;

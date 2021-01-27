@@ -1,11 +1,7 @@
 import React from "react";
 
 const DisplayBottom = () => {
-  return (
-    <div>
-      <h1>DisplayBottom</h1>
-    </div>
-  );
+  return <div className="display-bottom display">0</div>;
 };
 
 export default DisplayBottom;
