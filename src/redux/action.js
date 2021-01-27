@@ -1,6 +1,6 @@
-import { CLEAR_DISPLAY, SHOW_RESULT } from "./actionTypes";
+import { CLEAR_DISPLAY } from "./actionTypes";
 
-export const changeDisplay = () => ({
+export const clearDisplay = () => ({
   type: CLEAR_DISPLAY
 });
 

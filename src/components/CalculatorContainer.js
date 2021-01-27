@@ -1,9 +1,12 @@
 import React from "react";
+
+import { connect } from "react-redux";
+
 import Button from "./buttons/Button";
 import DisplayBottom from "./display/DisplayBottom";
 import DisplayTop from "./display/DisplayTop";
 
-const CalculatorContainer = () => {
+const CalculatorContainer = (props) => {
   const operationButtons = [
     "ac",
     "/",
@@ -23,10 +26,11 @@ const CalculatorContainer = () => {
     "0",
     "."
   ];
+  console.log(props.displayValue);
   return (
     <div className="calculator-container">
-      <DisplayTop />
-      <DisplayBottom />
+      <DisplayTop displayValue={props.displayValue} />
+      <DisplayBottom displayValue={props.displayValue} />
       {operationButtons.map((btn) => {
         if (btn === "ac") {
           return <Button class="ac-button button" buttonText={btn} />;
@@ -42,4 +46,10 @@ const CalculatorContainer = () => {
   );
 };
 
-export default CalculatorContainer;
+const mapStateToProps = (state) => {
+  return {
+    displayValue: state.display.displayValue
+  };
+};
+
+export default connect(mapStateToProps)(CalculatorContainer);

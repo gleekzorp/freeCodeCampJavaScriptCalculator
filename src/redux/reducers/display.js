@@ -1,7 +1,7 @@
 import { CLEAR_DISPLAY } from "../actionTypes";
 
 const initialState = {
-  displayValue: "0"
+  displayValue: "1"
 };
 
 export default function (state = initialState, action) {

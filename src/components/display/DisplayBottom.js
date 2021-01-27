@@ -1,7 +1,8 @@
 import React from "react";
 
-const DisplayBottom = () => {
-  return <div className="display-bottom display">0</div>;
+const DisplayBottom = (props) => {
+  const { displayValue } = props;
+  return <div className="display-bottom display">{displayValue}</div>;
 };
 
 export default DisplayBottom;
