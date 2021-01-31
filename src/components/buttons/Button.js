@@ -1,12 +1,11 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { clearDisplay } from "../../redux/action";
 
 const Button = (props) => {
-  const dispatch = useDispatch();
+  const { handleClick, buttonText, className } = props;
+  const buttonOperation = buttonText === "x" ? "*" : buttonText;
   return (
-    <div className={props.class} onClick={() => dispatch(clearDisplay())}>
-      <h1>{props.buttonText}</h1>
+    <div className={className} onClick={() => handleClick(buttonOperation)}>
+      <h1>{buttonText}</h1>
     </div>
   );
 };
