@@ -27,6 +27,7 @@ https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-proje
   - Example: `2 + 2 = 4` then the user clicks `equal` and it will be `6` then `8`
     - The FCC calculator doesn't do this
     - Current I'm catching this in my try/catch and just logging an error
+- Make some notes about the `regex` that I used.
 
 ## Some Pseudo
 
