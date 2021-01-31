@@ -20,6 +20,7 @@ https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-proje
 - Styling
   - Update colors to match a little closer to design
   - Update font
+  - Possibly change the buttons into buttons for accessibility
 - Add a modal for when a user creates a bad calculation
   - example: `2 + 2 +` or `2 + -`
 - Should we allow for additional evals with the equal sign?
