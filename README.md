@@ -6,7 +6,7 @@ https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-proje
 
 ## TODO:
 
-- Add the id's to pass the FCC tests
+- Bring back the `app.js` so I can add the coded by section
 - Create unit tests for the following test cases
   - assert 10.7 / 0.2 === 53.5
   - assert 2 / 7 === 0.285714285714
@@ -17,10 +17,6 @@ https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-proje
 - Look back at the code as I'm sure there is some refactoring I can do to clean up some of the logic.
 - Clean out `console.log`
 - Add event listener so the user doesn't have to click the buttons
-- Styling
-  - Update colors to match a little closer to design
-  - Update font
-  - Possibly change the buttons into buttons for accessibility
 - Add a modal for when a user creates a bad calculation
   - example: `2 + 2 +` or `2 + -`
 - Should we allow for additional evals with the equal sign?

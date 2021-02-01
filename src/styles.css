@@ -1,3 +1,35 @@
+@import "https://fonts.googleapis.com/css?family=Share+Tech+Mono";
+@font-face {
+  font-family: "Digital";
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7")
+      format("svg");
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: Share Tech Mono, monospace;
+  color: white;
+}
+
 #root {
   display: flex;
   justify-content: center;
@@ -10,17 +42,22 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 0.5fr 0.5fr repeat(5, 1fr);
-  gap: 2px;
+  gap: 1px;
   width: 90%;
-  max-width: 500px;
+  /* max-width: 400px; */
+  max-width: 300px;
   padding: 0.5em;
-  border: 3px solid gray;
+  border: 2px solid #47476b;
 }
 
 .display {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  font-family: digital;
+  word-break: break-word;
+  text-align: right;
+  font-size: 1.5rem;
 }
 
 .display-top {
@@ -34,19 +71,26 @@
 }
 
 .button {
-  background-color: gray;
+  background-color: #4d4d4d;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  color: white;
+}
+
+.button:hover {
+  outline: 1px solid white;
 }
 
 .operation-button {
-  background-color: lightgray;
+  background-color: rgb(102, 102, 102);
 }
 
 .ac-button {
   grid-column: 1/3;
-  background-color: red;
+  background-color: rgb(172, 57, 57);
 }
 
 .zero-button {
@@ -56,5 +100,5 @@
 .equal-button {
   grid-column: 4/-1;
   grid-row: 6 /-1;
-  background-color: blue;
+  background-color: rgb(0, 68, 102);
 }

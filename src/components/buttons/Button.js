@@ -5,13 +5,13 @@ const Button = (props) => {
   const { btn, id } = props.data;
   const buttonOperation = btn === "x" ? "*" : btn;
   return (
-    <div
+    <button
       id={id}
       className={className}
       onClick={() => handleClick(buttonOperation)}
     >
-      <h1>{btn}</h1>
-    </div>
+      {btn}
+    </button>
   );
 };
 
