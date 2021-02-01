@@ -3,12 +3,12 @@ import ReactDOM from "react-dom";
 
 import "./styles.css";
 
-import CalculatorContainer from "./components/CalculatorContainer";
+import App from "./app";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <StrictMode>
-    <CalculatorContainer />
+    <App />
   </StrictMode>,
   rootElement
 );

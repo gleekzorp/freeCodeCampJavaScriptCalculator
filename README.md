@@ -6,7 +6,6 @@ https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-proje
 
 ## TODO:
 
-- Bring back the `app.js` so I can add the coded by section
 - Create unit tests for the following test cases
   - assert 10.7 / 0.2 === 53.5
   - assert 2 / 7 === 0.285714285714
