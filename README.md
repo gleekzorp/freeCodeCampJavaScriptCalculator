@@ -200,3 +200,27 @@ https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-proje
 // 20 + 02 will replace entire value with 2
 // 20 + 022 will give 38 and it should be 42
 ```
+
+### Original Array
+
+```javascript
+const operationButtons = [
+  "ac",
+  "/",
+  "x",
+  "7",
+  "8",
+  "9",
+  "-",
+  "4",
+  "5",
+  "6",
+  "+",
+  "1",
+  "2",
+  "3",
+  "=",
+  "0",
+  "."
+];
+```

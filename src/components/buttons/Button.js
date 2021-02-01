@@ -1,11 +1,16 @@
 import React from "react";
 
 const Button = (props) => {
-  const { handleClick, buttonText, className } = props;
-  const buttonOperation = buttonText === "x" ? "*" : buttonText;
+  const { handleClick, className } = props;
+  const { btn, id } = props.data;
+  const buttonOperation = btn === "x" ? "*" : btn;
   return (
-    <div className={className} onClick={() => handleClick(buttonOperation)}>
-      <h1>{buttonText}</h1>
+    <div
+      id={id}
+      className={className}
+      onClick={() => handleClick(buttonOperation)}
+    >
+      <h1>{btn}</h1>
     </div>
   );
 };

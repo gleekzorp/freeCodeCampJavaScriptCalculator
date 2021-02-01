@@ -46,7 +46,7 @@ const CalculatorContainer = () => {
         // const evaluation = String(eval(modifiedEquation));
         // I was running into an error with
         // 10.7 / 0.2 (FCC and my phone calc gets 53.5 and I get 53.49999999)
-        // I looked into his code and found this evaluation and it seems to work
+        // I looked into the FCC code and found this evaluation and it seems to work
         // https://codepen.io/freeCodeCamp/pen/wgGVVX?editors=0010
         const evaluation =
           Math.round(1000000000000 * eval(modifiedEquation)) / 1000000000000;
@@ -63,6 +63,7 @@ const CalculatorContainer = () => {
     console.log("handleClear");
     setCurrentValue("0");
     setEquation(null);
+    setResult(false);
   };
 
   const handleOperation = (btn) => {
@@ -168,72 +169,74 @@ const CalculatorContainer = () => {
   };
 
   const operationButtons = [
-    "ac",
-    "/",
-    "x",
-    "7",
-    "8",
-    "9",
-    "-",
-    "4",
-    "5",
-    "6",
-    "+",
-    "1",
-    "2",
-    "3",
-    "=",
-    "0",
-    "."
+    { btn: "ac", id: "clear" },
+    { btn: "/", id: "divide" },
+    { btn: "x", id: "multiply" },
+    { btn: "7", id: "seven" },
+    { btn: "8", id: "eight" },
+    { btn: "9", id: "nine" },
+    { btn: "+", id: "add" },
+    { btn: "4", id: "four" },
+    { btn: "5", id: "five" },
+    { btn: "6", id: "six" },
+    { btn: "-", id: "subtract" },
+    { btn: "1", id: "one" },
+    { btn: "2", id: "two" },
+    { btn: "3", id: "three" },
+    { btn: "=", id: "equals" },
+    { btn: "0", id: "zero" },
+    { btn: ".", id: "decimal" }
   ];
+
   return (
     <div className="calculator-container">
       <DisplayTop equation={equation} currentValue={currentValue} />
       <DisplayBottom equation={equation} currentValue={currentValue} />
-      {operationButtons.map((btn, idx) => {
+      {operationButtons.map((button) => {
+        const { btn, id } = button;
         if (btn === "ac") {
           return (
             <Button
-              key={idx}
+              key={id}
               handleClick={handleClick}
               className="ac-button button"
-              buttonText={btn}
+              data={button}
             />
           );
         } else if (btn === "0") {
           return (
             <Button
-              key={idx}
+              key={id}
               handleClick={handleClick}
               className="zero-button button"
-              buttonText={btn}
+              data={button}
             />
           );
         } else if (btn === "=") {
           return (
             <Button
-              key={idx}
+              key={id}
               handleClick={handleClick}
               className="equal-button button"
-              buttonText={btn}
+              data={button}
             />
           );
         } else if (btn === "x" || btn === "/" || btn === "+" || btn === "-") {
           return (
             <Button
-              key={idx}
+              key={id}
               handleClick={handleClick}
               className="operation-button button"
-              buttonText={btn}
+              data={button}
             />
           );
         } else {
           return (
             <Button
-              key={idx}
+              key={id}
               handleClick={handleClick}
               className="button"
-              buttonText={btn}
+              data={button}
             />
           );
         }
